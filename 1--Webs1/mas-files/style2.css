@@ -1,0 +1,63 @@
+/*-----------------------------------------------------------------------------------------*/
+/*Acrod de privacitat*/
+body{
+    background-color: #161724c9;
+    color: white;
+    font: 200 14px "Poppins", sans-serif;
+}
+
+.scrollable-content {
+    height: 70vh; /* Esto establece la altura del div al 50% del viewport height */
+    overflow-y: auto; /* Esto permite que el contenido se haga scroll verticalmente si es necesario */      
+    width: 60%; /* Ancho del div al 80% del ancho de la pantalla */
+    margin: auto; /* Centra el div horizontalmente */ 
+}
+
+h1{
+text-align: center;
+}
+
+p{
+    text-align: justify;
+}
+
+.boddy{
+    margin: auto;
+}
+
+#div{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 10px 35px;
+}
+
+.shape1, .shape2{
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape1{
+    background: linear-gradient(
+            #12dc9a, #8ae8ca, #a4c8bc8f
+    );
+    right: 76%;
+    bottom: 71%;
+  }    
+
+.shape2{
+    background: linear-gradient(
+            #a4c8bc8f, #8ae8ca, #12dc9a
+    );
+    left: 75%;
+    top: 72%;
+}
+
+/*-----------------------------------------------------------------------------------------*/

@@ -1,0 +1,16 @@
+---
+- name: Instalacio de Nginx
+  hosts: webservers-nginx
+  become: yes
+  tasks:
+    - name: Instalant el package nginx
+      package:
+        name: nginx
+        state: latest
+        update_cache: true
+    - name: Servei Nginx arrancat
+      service: #"name=nginx state=started enabled=true"
+        name: nginx
+        state: started
+        enabled: true
+...

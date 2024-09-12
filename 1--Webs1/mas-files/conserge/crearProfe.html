@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cat">
+
+
+
+<head>
+  <!-- Titol i etiquetes meta -->
+    <meta charset="UTF-8">
+    <title>Crear professor</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="/imagenes/mas.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    
+    <!--Div per crear les rodones flotants-->
+    <div class="background">
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+    </div>
+    
+    <!--Defineix el formulari amb el mètode POST per enviar les dades a validacioCrearProfe.php per a la seva validació i processament.-->
+    <form method="POST" action="validacioCrearProfe.php">
+        
+        <!--Logo professor-->
+        <img src="../imagenes/fotoProfe.png" alt="professor">
+
+        <!--Titol-->
+        <h3>Registre professorat</h3>
+       
+        <!--
+        Inputs formulari (Nom complet, email, telèfon)
+        
+        pattern: Patró de validació per assegurar que el nom comença amb una lletra majúscula seguida de fins a 39 lletres minúscules.
+        
+        oninput="setCustomValidity('');": Esborra el missatge d'error personalitzat quan l'usuari està introduint dades.
+
+        oninvalid="setCustomValidity('Introdueix un nom vàlid');": Mostra un missatge d'error personalitzat si la validació del patró falla.
+        --> 
+       <input   type="text" 
+                placeholder="Nom" 
+                title="Introdueix el nom" 
+                name="nom"
+                pattern="^[A-Z][a-záéíóúñü]{0,39}$"
+                oninput="setCustomValidity('');"
+                oninvalid="setCustomValidity('Introdueix un nom vàlid');"
+                required>
+
+        <input  type="text" 
+                placeholder="Primer cognom" 
+                title="Introdueix primer cognom"
+                name="cog1"
+                pattern = "^[A-Z][a-záéíóúñü]{0,39}$"
+                oninput="setCustomValidity('');"
+                oninvalid="setCustomValidity('Introdueix un cognom vàlid');"
+                required>
+
+        <input  type="text" 
+                placeholder="Segon cognom" 
+                title="Introdueix segon cognom" 
+                name="cog2"
+                pattern="^[A-Z][a-záéíóúñü]{0,39}$"
+                oninput="setCustomValidity('');"
+                oninvalid="setCustomValidity('Introdueix un cognom vàlid');"
+                required>
+       
+        <input  type="email" 
+                placeholder="Correu electrònic" 
+                title="Introdueix email" 
+                name="email"
+                oninput="setCustomValidity('');"
+                oninvalid="setCustomValidity('Introdueix una direcció de correu vàlida');"
+                required>
+       
+        <input  type="text" 
+                placeholder="Telèfon" 
+                title="Introdueix telèfon" 
+                name="tel"
+                pattern="[0-9]{9}"
+                oninput="setCustomValidity('');"
+                oninvalid="setCustomValidity('Introdueix un telèfon vàlid de 9 dígits');"
+                required>
+        
+       
+        <!--Botó per enviar les dades-->
+        <input type="submit" value="Enviar dades">
+    </form>
+</body>
+</html>
